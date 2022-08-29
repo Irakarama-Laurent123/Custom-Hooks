@@ -4,6 +4,9 @@ import Tasks from "./components/Tasks/Tasks";
 import NewTask from "./components/NewTask/NewTask";
 
 function App() {
+  useHttp({
+    url: "https://react-http-96a99-default-rtdb.firebaseio.com/tasks.json",
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [tasks, setTasks] = useState([]);
